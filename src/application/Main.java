@@ -26,6 +26,22 @@ public class Main {
         System.out.println("FOOD TRUCK EXPRESS");
         System.out.println("Sistema de registro de ventas");
 
+        registrarVentas(ventas, productos, turnos);
     }
+
+    public static void registrarVentas(double[][] ventas, String[] productos, String[] turnos) {
+
+        for (int i = 0; i < productos.length; i++) {
+
+            for (int j = 0; j < turnos.length; j++) {
+
+                System.out.println("Ingrese el valor de la venta de "
+                        + productos[i] + " en el turno de " + turnos[j] + ": ");
+
+                ventas[i][j] = sc.nextDouble();
+            }
+        }
+    }
+
 }
 
