@@ -38,10 +38,41 @@ public class Main {
                 System.out.println("Ingrese el valor de la venta de "
                         + productos[i] + " en el turno de " + turnos[j] + ": ");
 
-                ventas[i][j] = sc.nextDouble();
+                ventas[i][j] = validarDato();
             }
         }
     }
+
+
+    public static double validarDato() {
+
+        double dato = 0;
+
+        while (true) {
+
+            if (!sc.hasNextDouble()) {
+
+                System.out.println("Error: Ingrese un numero valido.");
+
+                sc.next();
+
+                continue;
+            }
+
+            dato = sc.nextDouble();
+
+            if (dato < 0) {
+
+                System.out.println("Error: Ingrese un numero mayor o igual a 0.");
+
+                continue;
+            }
+
+            return dato;
+        }
+    }
+
+
 
 }
 
