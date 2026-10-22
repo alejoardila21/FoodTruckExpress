@@ -122,6 +122,13 @@ public class Main {
 
         System.out.println("Turno con menor venta: "
                 + turnos[menorTurno] + " $" + totalTurnos[menorTurno]);
+
+        if (totalGeneral > 500000) {
+            System.out.println("Meta de Ventas Alcanzada");
+        } else {
+            System.out.println("Meta No Alcanzada");
+        }
+
     }
 
 
